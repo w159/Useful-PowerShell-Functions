@@ -1,4 +1,4 @@
-﻿function Get-IntuneReport {
+function Get-IntuneReport {
     <#
     .SYNOPSIS
     Function for getting Intune Reports data. As zip file (csv) or PS object.
@@ -88,7 +88,15 @@
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [ValidateSet('DeviceCompliance', 'DeviceNonCompliance', 'Devices', 'DetectedAppsAggregate', 'FeatureUpdatePolicyFailuresAggregate', 'DeviceFailuresByFeatureUpdatePolicy', 'FeatureUpdateDeviceState', 'UnhealthyDefenderAgents', 'DefenderAgents', 'ActiveMalware', 'Malware', 'AllAppsList', 'AppInstallStatusAggregate', 'DeviceInstallStatusByApp', 'UserInstallStatusAggregateByApp')]
+        [ValidateSet('DeviceCompliance', 'DeviceNonCompliance', 'Devices', 'DetectedAppsAggregate', 'FeatureUpdatePolicyFailuresAggregate', `
+                     'DeviceFailuresByFeatureUpdatePolicy', 'FeatureUpdateDeviceState', 'UnhealthyDefenderAgents', 'DefenderAgents', 'ActiveMalware', `
+                     'Malware', 'AllAppsList', 'AppInstallStatusAggregate', 'DeviceInstallStatusByApp', 'UserInstallStatusAggregateByApp', `
+                     'MAMAppConfigurationStatus', 'MAMAppProtectionStatus', 'DiscoveredAppsRawData', 'AllAppsList', 'ComanagedDeviceWorkloads', `
+                     'ComanagementEligibilityTenantAttachedDevices', 'DeviceRunStatesByProactiveRemediation', 'DevicesWithInventory', 'FirewallStatus', `
+                     'GPAnalyticsSettingMigrationReadiness', 'QualityUpdateDeviceErrorsByPolicy', 'QualityUpdateDeviceStatusByPolicy', 'MAMAppProtectionStatus', `
+                     'MAMAppConfigurationStatus' `
+                    )]
+
         [string] $reportName
         ,
         [hashtable] $header
