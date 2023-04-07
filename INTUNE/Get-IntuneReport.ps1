@@ -1,4 +1,4 @@
-﻿function Get-IntuneReport {
+function Get-IntuneReport {
     <#
     .SYNOPSIS
     Function for getting Intune Reports data. As zip file (csv) or PS object.
